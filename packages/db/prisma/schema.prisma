@@ -14,9 +14,43 @@ datasource db {
 }
 
 model Client {
-  id          String @id @default(uuid())
-  name        String
-  dob         String
-  email       String
-  phoneNumber String
+  id       String  @id @default(uuid())
+  name     String
+  username String  @unique
+  email    String
+  password String
+  orders   Order[]
+}
+
+model Freelancer {
+  id       String  @id @default(uuid())
+  name     String
+  username String  @unique
+  password String
+  aboutUs  String
+  skills   Skill[]
+  orders   Order[]
+}
+
+model Order {
+  id           String     @id @default(uuid())
+  clientId     String
+  freelancerId String
+  title        String
+  description  String
+  amount       BigInt
+  accepted     Boolean    @default(false)
+  paid         Boolean    @default(false)
+  Client       Client     @relation(fields: [clientId], references: [id])
+  Freelancer   Freelancer @relation(fields: [freelancerId], references: [id])
+}
+
+enum Skill {
+  UIUX
+  WEBDEV
+  APPDEV
+  CODM
+  FIFA
+  VIDEOEDIT
+  PHOTOGRAGHY
 }
