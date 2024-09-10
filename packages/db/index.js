@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, Prisma } from "@prisma/client";
 
 const prismaClientSingleton = () => {
   return new PrismaClient();
@@ -8,4 +8,3 @@ const prismaClientSingleton = () => {
 const prisma = prismaClientSingleton();
 
 export default prisma;
-
