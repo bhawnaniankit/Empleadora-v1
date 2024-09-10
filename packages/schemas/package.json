@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "./src/auth.schema.ts",
   "scripts": {},
+  "type": "module",
   "exports": {
-    "./clientSignup": "./src/auth.ts"
+    "./clientSignup": "./src/auth.js"
   },
   "keywords": [],
   "author": "",
