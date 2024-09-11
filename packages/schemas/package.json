@@ -5,7 +5,9 @@
   "scripts": {},
   "type": "module",
   "exports": {
-    "./clientSignup": "./src/auth.js"
+    "./clientSignup": "./src/auth.js",
+    "./contest": "./src/contest.js",
+    "./submition": "./src/submition.js"
   },
   "keywords": [],
   "author": "",
