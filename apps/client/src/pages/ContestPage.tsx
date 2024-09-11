@@ -43,34 +43,36 @@ export default function ContestPage() {
 
             <div className="grid gap-6 md:grid-cols-2">
               {[...Array(6)].map((_, i) => (
-                <Card key={i}>
-                  <CardHeader>
-                    <CardTitle className="flex justify-between items-start">
-                      <span>Logo Design for Tech Startup</span>
-                      <Badge variant="secondary">Design</Badge>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">Create a modern and innovative logo for a cutting-edge tech startup in the AI industry.</p>
-                    <div className="flex justify-between text-sm">
-                      <div className="flex items-center">
-                        <Trophy className="w-4 h-4 mr-1" />
-                        <span>$500</span>
+                <Link to={"/contest/fdbd945d-2052-43cf-9262-36fb36279a9c"}>
+                  <Card key={i}>
+                    <CardHeader>
+                      <CardTitle className="flex justify-between items-start">
+                        <span>Logo Design for Tech Startup</span>
+                        <Badge variant="secondary">Design</Badge>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground mb-4">Create a modern and innovative logo for a cutting-edge tech startup in the AI industry.</p>
+                      <div className="flex justify-between text-sm">
+                        <div className="flex items-center">
+                          <Trophy className="w-4 h-4 mr-1" />
+                          <span>$500</span>
+                        </div>
+                        <div className="flex items-center">
+                          <Users className="w-4 h-4 mr-1" />
+                          <span>24 entries</span>
+                        </div>
+                        <div className="flex items-center">
+                          <Clock className="w-4 h-4 mr-1" />
+                          <span>3 days left</span>
+                        </div>
                       </div>
-                      <div className="flex items-center">
-                        <Users className="w-4 h-4 mr-1" />
-                        <span>24 entries</span>
-                      </div>
-                      <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-1" />
-                        <span>3 days left</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                  <CardFooter>
-                    <Button className="w-full">View Contest</Button>
-                  </CardFooter>
-                </Card>
+                    </CardContent>
+                    <CardFooter>
+                      <Button className="w-full">View Contest</Button>
+                    </CardFooter>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div>

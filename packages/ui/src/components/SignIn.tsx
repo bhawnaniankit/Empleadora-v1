@@ -24,7 +24,7 @@ export const SignIn = () => {
                 username: username,
                 password: password
               })
-              navigate("/contest")
+              navigate("/dashboard")
             }
             catch (e) {
               console.log(e);

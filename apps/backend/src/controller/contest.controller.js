@@ -15,7 +15,7 @@ export const createContest = async (req, res) => {
         data: {
           title: payload.title,
           description: payload.description,
-          clientId: res.userId
+          clientId: res.userId || '5ee9443f-e846-4af8-8861-2f2deb5e65aa'
         }
       })
 

@@ -20,7 +20,7 @@ export default function AddEventPage() {
 
   return (
     <div className=" h-screen pt-9 container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Add New Event</h1>
+      <h1 className="text-2xl font-bold mb-4">Add New Contest</h1>
       <form className="space-y-4">
         <div>
           <Label htmlFor="eventName">Contest Name</Label>
@@ -64,13 +64,15 @@ export default function AddEventPage() {
 
         <div>
           <Label htmlFor="eventDescription">Description</Label>
-          <Textarea onChange={(e: any) => { setDes(e.target.vaue) }} id="eventDescription" placeholder="Enter event description" />
+          <Textarea onChange={(e: any) => { setDes(e.target.value) }} id="eventDescription" placeholder="Enter event description" />
         </div>
 
         <Button onClick={async () => {
           try {
-            const res = await axios.post("http://localhost:8080/api/v1/contest/create", { title: title, description: des }, { withCredentials: true });
-            //navigate(`/contest/${res.data.id}`);
+            console.log(title, des)
+            const res = await axios.post("http://localhost:8080/api/v1/contest/create", { title: title, description: des });
+            console.log(res.data)
+            navigate(`/contest/${res.data.id}`);
           } catch (e) {
             console.log(e);
           }
