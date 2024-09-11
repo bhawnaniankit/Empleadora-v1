@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { cliientLoggedIn, lancerLoggedIn } from "../middleware/auth.middleware";
-import { submitSubmition } from "../controller/submition.controller";
+import { cliientLoggedIn, lancerLoggedIn } from "../middleware/auth.middleware.js";
+import { submitSubmition } from "../controller/submition.controller.js";
 
 export const Submitionrouter = Router();
 
